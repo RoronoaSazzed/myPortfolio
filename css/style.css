@@ -1,0 +1,72 @@
+/* first div starts */
+
+.first-div{
+    color: white;
+    background-color: #1a1a1a;
+}
+
+body{
+    background-color: grey;
+    color: white;
+}
+
+#nav{
+    width: 85%;
+}
+
+.navbar {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+    color: white;
+}
+.margin-navbar{
+    margin-top: 10px;
+}
+.nav.navbar-nav li a {
+    color: white;
+}
+.nav.navbar-nav li a:hover {
+    color:  #F5DEAA;
+    border-bottom: 1px solid wheat;
+}
+.nav.navbar-nav li .TYF{
+    color: #dab33e;
+}
+.nav.navbar-nav li .TYF:hover{
+    color: #8A4E05;
+}
+
+.HAIMRR{
+    font-size: 16px;
+    padding: 12px;
+    font-weight: bold;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.HAIMRR:hover{
+    font-family: 'Gentium Book Basic', serif;
+
+    text-decoration: none;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+.third-div{
+    background-image: url(../images/Ahsanullah-University.jpg);
+    min-height: 400px;
+    background-repeat: none;
+    background-size: cover;
+    color: black;
+    opacity: .7;
+    
+}
+
+.margin-aust{
+    margin-top: 180px;
+}
+
+
