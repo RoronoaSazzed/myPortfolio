@@ -28,14 +28,14 @@
 }
 
 
-.HAIMRR{
+.MOAEMCL{
     font-size: 16px;
     padding: 12px;
     font-weight: bold;
     font-family: 'Gentium Book Basic', serif;
 }
 
-.HAIMRR:hover{
+.MOAEMCL:hover{
     font-family: 'Gentium Book Basic', serif;
 
     text-decoration: none;
@@ -44,6 +44,34 @@
 .logo{
     width: 100px;
     height: auto;
+}
+
+.header-text-black{
+    font-family: 'Gabriela', serif;
+    font-weight: bolder;
+    color: #16EFF4;
+    text-shadow: 0 0 10px;
+    font-size: 50px;
+}
+
+.header-text-white{
+    font-family: 'Gabriela', serif;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 5px;
+    font-size: 50px;
+}
+
+.small-header{
+    font-size: 35px;
+    font-family: 'Gabriela', serif;
+    color:  #ffff99;
+}
+
+.pgraph{
+    font-family: 'Merienda One', cursive;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 .my-skills-div{
@@ -56,18 +84,36 @@
     margin-top: 50px;
 }
 
-.second-div{
+.about-me-div{
     background-image: url(../images/Ahsanullah-University.jpg);
     min-height: 600px;
     background-repeat: none;
     background-size: cover;
-    color: black;
-    opacity: .7;
+
+}
+.yellow{
+    color:  #16EFF4;
+    text-shadow: 0 0 1px;
+}
+
+.mySelf{
+    background-color: black;
+    opacity: .6;
+    color: white;
+}
+
+.content-about-me{
+    margin-top: 150px;
+}
+
+.edu-links{
+    color:  #16EFF4;
     
 }
 
-.content-second-div{
-    margin-top: 50px;
+.edu-links:hover{
+    color:  #16EFF4;
+    text-shadow: 0 0 2px;
 }
 
 .margin-aust{
@@ -76,6 +122,7 @@
 
 .portfolio-div{
     min-height: 550px;
+    background-color: #18BC9C;
 }
 .portfolio{
     width: 600px;
