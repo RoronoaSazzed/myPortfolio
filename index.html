@@ -45,7 +45,19 @@
         <!-- Linking header text font -->
         <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Radley' rel='stylesheet' type='text/css'>
+  <style >
+#doughnut,#doughnut2,#doughnut3{
+	margin-top: 10%;
+  position: absolute;
+}
+#skill1,#skill2,#skill3{
+	margin-top: 11%;
+  position: relative;
+}
+  </style>
 
     </head>
     <body>
@@ -142,6 +154,9 @@
         <div class="container-fluid my-skills-div">
             <div class="row margin-content-skills">
                 <h1 class="text-center center-block header-text-black">MY SKILLS</h1>
+                <div class="col-md-1 col-sm-1"></div>
+                <div class="col-md-10 col-sm-10">
+                <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block">
                     <h1 class="small-header">Graphic Design</h1>
                     <p class="pgraph">I have been working as Graphic Designer for about a year. Within this period of time, I did lots of work and had valuable experiences. I am good at Photoshop, Illustrator</p>
@@ -151,10 +166,29 @@
                     <p class="pgraph">I am also Web Designer. This is the most favorite section of mine. I have been in this field for one and half year. I am compatible with html5, css3, js, jquery, bootstrap and php</p>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12 text-center center-block">
-                    <h1 class="small-header">Wordpress Developing</h1>
+                    <h1 class="small-header">Wordpress</h1>
                     <p class="pgraph">Another field I am comfortable with. I can develop your website via wordpress in a very short amount of time.</p>
                 </div>
+                </div>
+        		<div class="row text-center center-block">
+        			<div class="col-md-4 col-sm-4 col-xs-12">
+                       <canvas id="doughnut" width="120" height="120"></canvas>
+                       <canvas id="skill1" width="120" height="120" class=""></canvas>
+                	</div>
+                	<div class="col-md-4 col-sm-4 col-xs-12">
+                       <canvas id="doughnut2" width="120" height="120"></canvas>  
+                       <canvas id="skill2" width="120" height="120" class=""></canvas>				
+                	</div>
+                		<div class="col-md-4 col-sm-4 col-xs-12">
+                		<canvas id="doughnut3" width="120" height="120"></canvas>
+                		<canvas id="skill3" width="120" height="120" class=""></canvas>
+                		</div>                			                			
+                		</div>
+                			
+                		</div>
+                <div class="col-md-1 col-sm-1"></div>
             </div>
+
         </div>
 
         <!-- portfolio div -->
@@ -238,9 +272,8 @@
         <div class="container-fluid experience-div">
 
 
-            <!-- Contents ->
-            
-            
+            <!-- Contents -->
+
             
         </div>
 
@@ -258,7 +291,7 @@
 
 
 
-            <!-- ::::: java script integration ::::: -->
+             <!-- ::::: java script integration ::::: -->
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -273,24 +306,112 @@
 
             </script>
 
+                    <!-- link for circular bars -->
+<script type="text/javascript">
+  //draw the doughnut
+var doughnutArray = [document.getElementById('doughnut').getContext('2d'), document.getElementById('doughnut2').getContext('2d'), document.getElementById('doughnut3').getContext('2d')];
+for (var i = 0; i < doughnutArray.length; i++) {
+  doughnutArray[i].lineWidth = 5; //thickness of the line
+  doughnutArray[i].fillStyle = '#eaeaea';
+  doughnutArray[i].strokeStyle = "#eaeaea";
+  doughnutArray[i].beginPath();
+  doughnutArray[i].arc(60, 60, 55, 4.72, 15, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
+  doughnutArray[i].stroke();
+}
+window.onload = function() {
+    loadSkills1();
+    loadSkills2();
+    loadSkills3();
+  }
+  /*Load skills one function*/
+function loadSkills1() {
+  var ctx = document.getElementById('skill1').getContext('2d');
+  var al = 0;
+  var start = 4.72;
+  var cw = ctx.canvas.width;
+  var ch = ctx.canvas.height;
+  var diff;
 
-            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-            <script>
-                (function(b, o, i, l, e, r) {
-                    b.GoogleAnalyticsObject = l;
-                    b[l] || (b[l] =
-                            function() {
-                                (b[l].q = b[l].q || []).push(arguments)
-                            });
-                    b[l].l = +new Date;
-                    e = o.createElement(i);
-                    r = o.getElementsByTagName(i)[0];
-                    e.src = 'https://www.google-analytics.com/analytics.js';
-                    r.parentNode.insertBefore(e, r)
-                }(window, document, 'script', 'ga'));
-                ga('create', 'UA-XXXXX-X', 'auto');
-                ga('send', 'pageview');
-            </script>
+  function progressSim() {
+    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.lineWidth = 5; //thickness of the line
+    ctx.fillStyle = '#E84855';
+    ctx.strokeStyle = "#E84855";
+    ctx.textAlign = 'center';
+    ctx.font = "30px Radley";
+    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
+    ctx.beginPath();
+    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
+    ctx.stroke();
+    if (al >= 88) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+      clearTimeout(sim);
+      // Add scripting here that will run when progress completes
+    }
+    al++;
+  }
+  var sim = setInterval(progressSim, 20); //speed   
+}
+/*loadSkills2 function*/
+function loadSkills2() {
+  var ctx = document.getElementById('skill2').getContext('2d');
+  var al = 0;
+  var start = 4.72;
+  var cw = ctx.canvas.width;
+  var ch = ctx.canvas.height;
+  var diff;
+
+  function progressSim() {
+    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.lineWidth = 5; //thickness of the line
+    ctx.fillStyle = '#E84855';
+    ctx.strokeStyle = "#E84855";
+    ctx.textAlign = 'center';
+    ctx.font = "30px Radley";
+    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
+    ctx.beginPath();
+    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
+    ctx.stroke();
+    if (al >= 89) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+      clearTimeout(sim);
+      // Add scripting here that will run when progress completes
+    }
+    al++;
+  }
+  var sim = setInterval(progressSim, 30); //speed
+}
+
+/* loadSkill3 function*/
+function loadSkills3() {
+  var ctx = document.getElementById('skill3').getContext('2d');
+  var al = 0;
+  var start = 4.72;
+  var cw = ctx.canvas.width;
+  var ch = ctx.canvas.height;
+  var diff;
+
+  function progressSim() {
+    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.lineWidth = 5; //thickness of the line
+    ctx.fillStyle = '#E84855';
+    ctx.strokeStyle = "#E84855";
+    ctx.textAlign = 'center';
+    ctx.font = "30px Radley";
+    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
+    ctx.beginPath();
+    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
+    ctx.stroke();
+    if (al >= 92) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+      clearTimeout(sim);
+      // Add scripting here that will run when progress completes
+    }
+    al++;
+  }
+  var sim = setInterval(progressSim, 40); //speed
+}
+</script>
 
 
     </body>
