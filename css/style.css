@@ -46,6 +46,12 @@
     height: auto;
 }
 
+.title-header{
+    font-size: 50px;
+    font-family: 'Manuale', serif;
+    color: cyan;
+}
+
 .header-text-black{
     font-family: 'Gabriela', serif;
     font-weight: bolder;
@@ -72,11 +78,14 @@
     font-family: 'Merienda One', cursive;
     font-size: 18px;
     letter-spacing: 2px;
+    color: white;
 }
 
 .my-skills-div{
-    min-height: 900px;
+    min-height: 600px;
     background-color: #1a1a1a;
+    background-size: cover;
+    background-repeat: none;
     color: white;
 }
 
@@ -85,10 +94,8 @@
 }
 
 .about-me-div{
-    background-image: url(../images/Ahsanullah-University.jpg);
+    background-color:  #1a1a1a;
     min-height: 600px;
-    background-repeat: none;
-    background-size: cover;
 
 }
 .yellow{
@@ -96,11 +103,6 @@
     text-shadow: 0 0 1px;
 }
 
-.mySelf{
-    background-color: black;
-    opacity: .6;
-    color: white;
-}
 
 .content-about-me{
     margin-top: 150px;
@@ -108,7 +110,7 @@
 
 .edu-links{
     color:  #16EFF4;
-    
+
 }
 
 .edu-links:hover{
@@ -121,8 +123,10 @@
 }
 
 .portfolio-div{
-    min-height: 550px;
-    background-color: #18BC9C;
+    min-height: 750px;
+    background-image: url(../images/skills.png);
+    background-repeat: none;
+    background-size: cover;
 }
 .portfolio{
     width: 600px;
@@ -143,3 +147,62 @@
     min-height: 500px;
     background-color: #1a1a1a;
 }
+
+
+.clients-div{
+    min-height: 220px;
+}
+
+.content-clients-div{
+    margin-top: 5px;
+}
+
+.header-text-b{
+    font-family: 'Gabriela', serif;
+    color: black;
+    text-shadow: 0 0 5px;
+    font-size: 35px;
+}
+
+.ul-header-text-b{
+    padding: 0 15px 10px 15px;
+    border-bottom: 4px solid black;
+}
+
+.sendMessage{
+    padding: 10px 15px 10px 15px;
+    background-color: #18bc9c;
+    font-family: 'Merienda One', cursive;
+    color: white;
+}
+
+.sendMessage:hover{
+    padding: 10px 15px 10px 15px;
+    background-color: #128F76;
+    font-family: 'Merienda One', cursive;
+    color: white;
+}
+
+.contact-me-div{
+    background-color: #1a1a1a;
+    min-height: 700px;
+}
+
+.content-contact-me-div{
+    margin-top: 50px;
+}
+.padding{
+    padding: 10px;
+    color: 
+}
+
+.ul-header-text-black{
+    padding: 0 15px 10px 15px;
+    border-bottom: 5px solid #16EFF4;
+}
+
+.ul-header-text-white{
+    padding: 0 15px 10px 15px;
+    border-bottom: 5px solid white;
+}
+
